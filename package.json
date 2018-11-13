@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "cross-env nodemon --exec babel-node server.js",
+    "build": "webpack --progress --display-error-details",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,18 +19,24 @@
   },
   "homepage": "https://github.com/IRIS-LAB/hivent-users-api#readme",
   "dependencies": {
+    "@babel/runtime": "^7.1.2",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongodb": "^3.1.8",
     "node-fetch": "^2.2.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
-    "babel-preset-env": "^1.7.0",
     "cross-env": "^5.2.0",
     "nodemon": "^1.18.5",
-    "webpack": "^4.25.1"
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
   }
 }
