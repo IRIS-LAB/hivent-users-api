@@ -23,6 +23,7 @@ export const getRouter = () => {
     }
   });
 
+  /** create users */
   usersRouter.post("/", async (req, res) => {
     try {
       res.send(await usersLBS.createUser(req.body));
